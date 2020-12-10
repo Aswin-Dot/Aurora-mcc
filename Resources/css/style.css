@@ -219,7 +219,7 @@ section {
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(images/background.jpg);
+        url(images/background-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -429,7 +429,7 @@ nav{
 /* THEME */
 
 .theme:nth-child(1):before {
-    background-image: url(images/theme.jpg);
+    background-image: url(images/theme-min.jpg);
 }
 
 .theme-section .page-content {
@@ -458,7 +458,7 @@ nav{
 
 .accordion .area-1 {
     height: 27rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/independent-woman1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/independent-woman1-min.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -482,7 +482,7 @@ nav{
 
 .tabs .area-2 {
     height: 27rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/digital2.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/digital2-min.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -654,47 +654,47 @@ nav{
 }
 
 .card-1:nth-child(1):before {
-    background-image: url(../images/dance.jpg);
+    background-image: url(../images/dance-min.jpg);
 }
 
 .card-1:nth-child(2):before {
-    background-image: url(../images/music.jpg);
+    background-image: url(../images/music-min.jpg);
 }
 
 .card-1:nth-child(3):before {
-    background-image: url(../images/mono-act.jpg);
+    background-image: url(../images/mono-act-min.jpg);
 }
 
 .card-1:nth-child(4):before {
-    background-image: url(../images/fashion-icon.jpg);
+    background-image: url(../images/fashion-icon-min.jpg);
 }
 
 .card-2:nth-child(1):before {
-    background-image: url(../images/creative-writing.jpg);
+    background-image: url(../images/creative-writing-min.jpg);
 }
 
 .card-2:nth-child(2):before {
-    background-image: url(../images/oration.jpg);
+    background-image: url(../images/oration-min.jpg);
 }
 
 .card-2:nth-child(3):before {
-    background-image: url(../images/poetry-writing.jpg);
+    background-image: url(../images/poetry-writing-min.jpg);
 }
 
 .card-3:nth-child(1):before {
-    background-image: url(../images/face-painting1.jpeg);
+    background-image: url(../images/face-painting1-min.jpeg);
 }
 
 .card-3:nth-child(2):before {
-    background-image: url(../images/collage-making.jpg);
+    background-image: url(../images/collage-making-min.jpg);
 }
 
 .card-3:nth-child(3):before {
-    background-image: url(../images/meme-creation.jpg);
+    background-image: url(../images/meme-creation-min.jpg);
 }
 
 .card-3:nth-child(4):before {
-    background-image: url(../images/photography.jpg);
+    background-image: url(../images/photography-min.jpg);
 }
 
 .content {
@@ -929,7 +929,7 @@ video{
 
 .about-section{
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url(images/back-college.jpg);
+  url(images/back-college-min.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
