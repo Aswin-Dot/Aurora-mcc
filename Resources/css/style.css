@@ -1,8 +1,3 @@
-/* * {
-    outline: 1px solid red;
-    background-color: red;
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -216,7 +211,7 @@ section {
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(images/background-min.jpg);
+        url(images/background2.JPG);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -245,7 +240,7 @@ header {
 .title-para{
     font-weight: 900;
     color: #fff;
-    font-size: 18%;
+    font-size: 50%;
     text-transform: uppercase;
 }
 
@@ -264,6 +259,12 @@ nav{
 }
 
 /* sticky nav */
+
+.logo{
+    height:50px;
+    border-radius: 20%;
+    margin-top: -4px;
+}
 
 .sticky {
     position: fixed;
@@ -1069,3 +1070,8 @@ footer {
 .js-wp-3.animate__animated {
     opacity: 1;
 }
+
+/* * {
+    outline: 1px solid red;
+    background-color: red;
+} */

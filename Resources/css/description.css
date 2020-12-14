@@ -71,6 +71,12 @@ h4{
     margin: 0 auto;
 }
 
+.logo {
+    height: 50px;
+    border-radius: 20%;
+    margin-top: -14px;
+}
+
 /* --------PRELOADER---------- */
 .spinner-wrapper {
     position: fixed;
