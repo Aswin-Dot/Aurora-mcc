@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+    --font-sans: 'Do Hyeon',
+        sans-serif;
+    --font-serif: 'Yanone Kaffeesatz',
+        serif;
+    --font-color: #c08497;
+}
+
+*:focus {
+    outline: 0;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fec7c2e7;
+    color: rgb(71, 71, 71);
+    font-family: 'Yanone Kaffeesatz',
+        sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    min-height: 100%;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 225%;
+    word-spacing: 2px;
+    padding: 70px 0 25px 0;
+}
+
+h2:after {
+    display: block;
+    content: ' ';
+    height: 3.5px;
+    background-color: var(--font-color);
+    width: 110px;
+    margin: 0 auto;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h4{
+    padding: 10px 0;
+}
+
+/* ------------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------ */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 50px;
+    border-radius: 20%;
+    margin-top: -14px;
+}
+
+/* --------PRELOADER---------- */
+.spinner-wrapper {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #c08497;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    width: 3.75rem;
+    height: 1.25rem;
+    margin: -0.625rem 0 0 -1.875rem;
+    /* is width and height divided by two */
+    text-align: center;
+}
+
+.spinner>div {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1.0);
+    }
+}
+
+/* ------------------------------------------------ */
+/* NAVIGATION */
+/* ------------------------------------------------ */
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    width: 100%;
+    /* box-shadow: 0 2px 1.5px #efefef; */
+    z-index: 9999;
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 3px 0 5px 0;
+    color: #555;
+}
+
+
+.sticky .main-nav {
+    margin: 5px 0 3px 0;
+}
+
+.sticky .main-nav li {
+    padding: 3px 0;
+    margin: 5px 15px 5px 15px;
+}
+
+.sticky .main-nav li a:hover {
+    color: #000;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-family: 'Yanone Kaffeesatz',
+        sans-serif;
+    list-style: none;
+    font-weight: 400;
+    font-size: 120%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.main-nav li {
+    padding: 6px 0;
+    margin: 10px 15px 10px 15px;
+}
+
+.main-nav li a {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    color: #95a5a6;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.main-nav li a:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--font-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.main-nav li a:hover {
+    color: #ecf0f1;
+}
+
+.main-nav li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ------------------------------------- */
+/* -----CONTENT------ */
+/* ------------------------------------- */
+
+.description-section {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 1rem;
+    width:90%;
+    margin-left: 5%;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    overflow: hidden;
+    height: 400px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1),
+    0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+
+}
+
+.description-container{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.description-container .long-copy {
+    margin-top: 35px;
+    width:90%;
+    margin-left: 5%;
+}
+
+.dance{
+    background-image: url(../images/dance.jpg);
+}
+.music{
+    background-image: url(../images/music.jpg);
+}
+.mono-act{
+    background-image: url(../images/mono-act.jpg);
+}
+.fashion-icon{
+    background-image: url(../images/fashion-icon.jpg);
+}
+.creative-writing{
+    background-image: url(../images/creative-writing.jpg);
+}
+.oration{
+    background-image: url(../images/oration.jpg);
+}
+.poetry-writing{
+    background-image: url(../images/poetry-writing.jpg);
+}
+.painting{
+    background-image: url(../images/painting.jpg);
+}
+.collage-making{
+    background-image: url(../images/collage-making.jpg);
+}
+.meme-creation{
+    background-image: url(../images/meme-creation.jpg);
+}
+.photography{
+    background-image: url(../images/photography.jpg);
+}
+
+@media only screen and (max-width: 900px) {
+    .description-title{
+        padding-top: 75px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .description-title {
+        padding-top: 75px;
+    }
+}
+
+/* ------------------------------------------------ */
+/* REGISTER BUTTON */
+/* ------------------------------------------------ */
+
+@-webkit-keyframes topAnimation {
+    from {
+        transform: translate(0rem, 0.4rem);
+    }
+
+    to {
+        transform: translate(0rem, 3.2rem);
+    }
+}
+
+@keyframes topAnimation {
+    from {
+        transform: translate(0rem, 0.4rem);
+    }
+
+    to {
+        transform: translate(0rem, 3.2rem);
+    }
+}
+
+@-webkit-keyframes bottomAnimation {
+    from {
+        transform: translate(-11rem, 0);
+    }
+
+    to {
+        transform: translate(-2rem, 0rem);
+    }
+}
+
+@keyframes bottomAnimation {
+    from {
+        transform: translate(-11rem, 0);
+    }
+
+    to {
+        transform: translate(-2rem, 0rem);
+    }
+}
+
+button.btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    font-family: 'Do Hyeon',
+        sans-serif;
+    position: relative;
+    letter-spacing: 0.15em;
+    margin: 0 auto;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 24px;
+    color: #111111;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+}
+
+button.btn::after,
+button.btn::before {
+    border: 0;
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 10%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -2;
+    border-radius: 50%;
+}
+
+button.btn::before {
+    border: 0;
+    background-color: #c08497;
+    top: -0.75rem;
+    left: 0.5rem;
+    -webkit-animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+    animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+}
+
+button.btn::after {
+    background-color: #ce72ce;
+    top: 3rem;
+    left: 13rem;
+    -webkit-animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+    animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+}
+
+button.btn:hover {
+    color: white;
+}
+
+button.btn:hover::before,
+button.btn:hover::after {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    -webkit-animation: none;
+    animation: none;
+}
+
+button.btn:hover::after {
+    left: 0rem;
+}
+
+button.btn:hover::before {
+    top: 0.5rem;
+    left: 0.35rem;
+}
+
+/* ------------ */
+.rules {
+    display: none;
+}
